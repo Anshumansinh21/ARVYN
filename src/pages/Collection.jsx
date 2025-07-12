@@ -1,12 +1,12 @@
 import React from "react";
-
+import image1 from "../../public/assets/Tshirt/over2.jpeg";
 
 const collections = [
   {
     id: 1,
     title: "Monochrome Elegance",
     subtitle: "Timeless sophistication",
-    image: "../../public/assets/Tshirt/over2.jpeg",
+    image: image1,
   },
   {
     id: 2,
