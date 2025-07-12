@@ -1,6 +1,7 @@
 import React from "react";
-import image1 from "../../public/assets/Tshirt/over2.jpeg";
+import image1 from "../assets/Tshirt/over2.jpeg";
 import image2 from "../assets/Tshirt/over3.jpg";
+import image3 from "../assets/Tshirt/over4.jpg";
 
 const collections = [
   {
@@ -19,7 +20,7 @@ const collections = [
     id: 3,
     title: "Modern Ritual",
     subtitle: "Contemporary refinement",
-    image: "/src/assets/Tshirt/over4.jpg",
+    image: image3,
   },
 ];
 
