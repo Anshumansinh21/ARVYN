@@ -12,13 +12,13 @@ const collections = [
     id: 2,
     title: "Structured Grace",
     subtitle: "Architectural precision",
-    image: "../src/assets/Tshirt/over3.jpg",
+    image: "../../src/assets/Tshirt/over3.jpg",
   },
   {
     id: 3,
     title: "Modern Ritual",
     subtitle: "Contemporary refinement",
-    image: "../src/assets/Tshirt/over4.jpg",
+    image: "../../src/assets/Tshirt/over4.jpg",
   },
 ];
 
