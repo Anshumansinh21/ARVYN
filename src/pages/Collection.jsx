@@ -5,7 +5,7 @@ const collections = [
     id: 1,
     title: "Monochrome Elegance",
     subtitle: "Timeless sophistication",
-    image: "../src/assets/Tshirt/over2.jpeg",
+    image: "../public/assets/Tshirt/over2.jpeg",
   },
   {
     id: 2,

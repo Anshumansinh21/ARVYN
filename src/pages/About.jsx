@@ -91,7 +91,7 @@ const About = () => {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <span className="text-sm tracking-widest text-gray-400 uppercase">Est. 2015</span>
+            <span className="text-sm tracking-widest text-gray-400 uppercase">Est. 2025</span>
           </motion.div>
           
           <SectionTitle>The Essence</SectionTitle>
