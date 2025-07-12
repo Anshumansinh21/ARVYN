@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 motion
 
-// ✅ Import all images
 import img1 from "../assets/Tshirt/polob1.jpg";
 import img2 from "../assets/Tshirt/polob.jpeg";
 import img3 from "../assets/Tshirt/reg2.jpg";
@@ -11,7 +10,7 @@ import img5 from "../assets/Tshirt/pol4.jpeg";
 import img6 from "../assets/Tshirt/pol5.jpeg";
 import img7 from "../assets/Tshirt/polo2.jpg";
 import img8 from "../assets/Tshirt/polo3.jpg";
-import img9 from "../assets/Tshirt/over5c.png";
+import img9 from "../assets/Tshirt/over 5c.png";
 import img10 from "../assets/Tshirt/over1.jpeg";
 
 // ✅ Create array using imported values
