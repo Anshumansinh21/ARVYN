@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 // import hero from "../assets/hero-model.jpg";
-import philosophyImage from "../assets/Tshirt/polo1.jpg";
+import philosophyImage from "../assets/homeh3.jpg";
 import hero from "../assets/Tshirt/pol5.jpeg";
 import collection1 from "../assets/collection-1.jpg";
 import collection2 from "../assets/collection-2.jpg";
@@ -148,52 +148,200 @@ export default function Home() {
       </section>
 
       {/* Featured Collection - Full Width Carousel Effect */}
-      <section className="py-36 bg-black text-white overflow-hidden">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="flex justify-between items-end mb-16"
-          >
-            <h2 className="text-5xl font-serif">Featured Collection</h2>
-            <p className="text-sm uppercase tracking-widest">SS/24</p>
-          </motion.div>
-          
-          <div className="relative h-[80vh]">
-            {[collection1, collection2, collection3].map((img, i) => (
-              <motion.div
-                key={i}
-                className={`absolute inset-0 overflow-hidden rounded-lg ${i === 0 ? 'z-30' : i === 1 ? 'z-20' : 'z-10'}`}
-                initial={{ x: i === 0 ? 0 : i === 1 ? '30%' : '60%', scale: i === 0 ? 1 : 0.9 }}
-                whileInView={{ 
-                  x: i === 0 ? 0 : i === 1 ? '20%' : '40%',
-                  transition: { duration: 1, delay: i * 0.2 }
-                }}
-                viewport={{ once: true, margin: "-100px" }}
-              >
-                <img
-                  src={img}
-                  className="w-full h-full object-cover"
-                />
-                <motion.div
-                  className="absolute bottom-0 left-0 p-8"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.8 }}
-                >
-                  <h3 className="text-2xl font-serif mb-2">Collection 0{i+1}</h3>
-                  <button className="text-sm uppercase tracking-widest border-b border-white pb-1 hover:opacity-70 transition-opacity">
-                    Explore
-                  </button>
-                </motion.div>
-              </motion.div>
-            ))}
+      {/* Featured Collection with Next-Level Animations */}
+<section className="relative py-24 bg-black text-white overflow-hidden">
+  {/* Animated background particles */}
+  <div className="absolute inset-0 overflow-hidden">
+    {[...Array(20)].map((_, i) => (
+      <motion.div
+        key={i}
+        className="absolute rounded-full bg-white/5"
+        initial={{
+          x: Math.random() * 100,
+          y: Math.random() * 100,
+          width: Math.random() * 10 + 2,
+          height: Math.random() * 10 + 2,
+        }}
+        animate={{
+          x: [null, Math.random() * 100],
+          y: [null, Math.random() * 100],
+          transition: {
+            duration: Math.random() * 10 + 10,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "linear"
+          }
+        }}
+      />
+    ))}
+  </div>
+
+  <div className="container mx-auto px-4 relative z-10">
+    {/* Header with floating animation */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ 
+        opacity: 1, 
+        y: 0,
+        transition: { 
+          duration: 0.8, 
+          ease: [0.16, 1, 0.3, 1] 
+        } 
+      }}
+      viewport={{ once: true }}
+      className="mb-20 text-center"
+    >
+      <motion.h2 
+        className="text-5xl md:text-7xl font-serif mb-4"
+        whileHover={{
+          backgroundImage: 'linear-gradient(90deg, #fff, #aaa, #fff)',
+          backgroundSize: '200% auto',
+          backgroundClip: 'text',
+          WebkitBackgroundClip: 'text',
+          color: 'transparent',
+          transition: { 
+            duration: 1.5,
+            repeat: Infinity 
+          }
+        }}
+      >
+        Featured Collection
+      </motion.h2>
+      <motion.div 
+        className="h-px bg-gradient-to-r from-transparent via-white to-transparent mx-auto w-1/2"
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        transition={{ delay: 0.3, duration: 1.5 }}
+        viewport={{ once: true }}
+      />
+    </motion.div>
+
+    {/* Grid with floating animation */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[collection1, collection2, collection3].map((img, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 60, rotate: i % 2 ? -2 : 2 }}
+          whileInView={{ 
+            opacity: 1, 
+            y: 0, 
+            rotate: 0,
+            transition: { 
+              duration: 0.8, 
+              delay: i * 0.15,
+              ease: [0.16, 1, 0.3, 1] 
+            } 
+          }}
+          whileHover={{
+            y: -10,
+            transition: { type: "spring", stiffness: 300 }
+          }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative group"
+        >
+          {/* Image with liquid distortion effect */}
+          <div className="relative overflow-hidden rounded-2xl aspect-[3/4]">
+            <motion.img
+              src={img}
+              className="w-full h-full object-cover"
+              initial={{ scale: 1 }}
+              whileHover={{ 
+                scale: 1.1,
+                filter: "brightness(1.1)",
+                transition: { duration: 0.8 }
+              }}
+            />
+            <motion.div 
+              className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100"
+              transition={{ duration: 0.4 }}
+            />
           </div>
-        </div>
-      </section>
+
+          {/* Floating content */}
+          <motion.div
+            className="absolute bottom-0 left-0 w-full p-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileHover={{ 
+              opacity: 1,
+              y: 0,
+              transition: { delay: 0.1 } 
+            }}
+          >
+            <motion.h3 
+              className="text-3xl font-serif mb-2"
+              whileHover={{
+                x: [0, 5, -5, 0],
+                transition: { duration: 0.6 }
+              }}
+            >
+              Collection 0{i+1}
+            </motion.h3>
+            <motion.button
+              className="flex items-center gap-2 text-sm uppercase tracking-widest"
+              whileHover={{ 
+                gap: 6,
+                transition: { type: "spring", stiffness: 500 }
+              }}
+            >
+              <span>Discover</span>
+              <motion.span
+                animate={{
+                  x: [0, 5, 0],
+                  transition: { 
+                    duration: 1.5,
+                    repeat: Infinity 
+                  }
+                }}
+              >
+                →
+              </motion.span>
+            </motion.button>
+          </motion.div>
+
+          {/* Floating border effect */}
+          <motion.div 
+            className="absolute inset-0 border-2 border-white/20 rounded-2xl pointer-events-none"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            whileHover={{
+              borderColor: "rgba(255,255,255,0.5)",
+              transition: { duration: 0.3 }
+            }}
+          />
+        </motion.div>
+      ))}
+    </div>
+
+    {/* Animated CTA */}
+    <motion.div
+      className="flex justify-center mt-20"
+      initial={{ opacity: 0 }}
+      whileInView={{ 
+        opacity: 1,
+        transition: { delay: 0.6 } 
+      }}
+      viewport={{ once: true }}
+    >
+      <motion.button
+        className="px-12 py-4 bg-white text-black rounded-full font-medium relative overflow-hidden"
+        whileHover={{
+          backgroundColor: "#000",
+          color: "#fff",
+          border: "1px solid white"
+        }}
+        transition={{ duration: 0.3 }}
+      >
+        <span className="relative z-10">View All Collections</span>
+        <motion.div 
+          className="absolute inset-0 bg-black origin-left"
+          initial={{ scaleX: 0 }}
+          whileHover={{ scaleX: 1 }}
+          transition={{ duration: 0.4 }}
+        />
+      </motion.button>
+    </motion.div>
+  </div>
+</section>
 
     {/* Lookbook - Enhanced Masonry Grid */}
 <section className="py-24 px-6 bg-white">
