@@ -275,7 +275,7 @@ const Contact = () => {
               </h3>
               <div className="flex space-x-4 mt-2">
                 <a
-                  href="https://instagram.com/yourusername"
+                  href="https://instagram.com/thearvyn"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-pink-600 transition duration-200"

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 motion
 
 import img1 from "../assets/Tshirt/polob1.jpg";
+import lookh from "../assets/lookbook-4.jpg";
 import img2 from "../assets/Tshirt/polob.jpeg";
 import img3 from "../assets/Tshirt/reg2.jpg";
 import img4 from "../assets/Tshirt/reg1.jpg";
@@ -34,7 +35,7 @@ const Lookbook = () => {
       <section className="relative h-[90vh] md:h-screen overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/30 to-transparent z-10" />
         <img
-          src={images[2]}
+          src={lookh}
           alt="Hero"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
