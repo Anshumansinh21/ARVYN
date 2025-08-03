@@ -5,7 +5,7 @@ import image2 from "../assets/Tshirt/over3.jpg";
 import image3 from "../assets/Tshirt/over4.jpg";
 import image4 from "../assets/Tshirt/polob2.jpeg";
 import image5 from "../assets/Tshirt/polosk2.jpeg";
-import image6 from "../assets/Tshirt/polosk2.jpeg";
+import image6 from "../assets/Tshirt/IMG_9769.JPG";
 // "../assets/Tshirt/IMG_9769.JPG";
 
 const collections = [
