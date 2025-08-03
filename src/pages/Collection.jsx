@@ -1,7 +1,11 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import image1 from "../assets/Tshirt/over2.jpeg";
 import image2 from "../assets/Tshirt/over3.jpg";
 import image3 from "../assets/Tshirt/over4.jpg";
+import image4 from "../assets/Tshirt/polob2.jpeg";
+import image5 from "../assets/Tshirt/polosk2.jpeg";
+import image6 from "../assets/Tshirt/IMG_9769.jpg";
 
 const collections = [
   {
@@ -9,18 +13,42 @@ const collections = [
     title: "Monochrome Elegance",
     subtitle: "Timeless sophistication",
     image: image1,
+    price: 899, // Price in INR or your currency
   },
   {
     id: 2,
     title: "Structured Grace",
     subtitle: "Architectural precision",
     image: image2,
+    price: 799,
   },
   {
     id: 3,
     title: "Modern Ritual",
     subtitle: "Contemporary refinement",
     image: image3,
+    price: 799,
+  },
+  {
+    id: 4,
+    title: "Monochrome Elegance",
+    subtitle: "Timeless sophistication",
+    image: image4,
+    price: 1499,
+  },
+  {
+    id: 5,
+    title: "Structured Grace",
+    subtitle: "Architectural precision",
+    image: image5,
+    price: 1799,
+  },
+  {
+    id: 6,
+    title: "Modern Ritual",
+    subtitle: "Contemporary refinement",
+    image: image6,
+    price: 1599,
   },
 ];
 
@@ -63,12 +91,17 @@ const Collection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                 <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                   <span className="text-gold-500 text-sm tracking-widest font-light">
-                    COLLECTION PIECE
+                    {/* COLLECTION PIECE */}
                   </span>
                   <h3 className="text-white text-3xl font-serif font-medium mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-300 font-light">{item.subtitle}</p>
+                  <p className="text-gray-300 font-light mb-1">
+                    {item.subtitle}
+                  </p>
+                  <p className="text-white font-medium text-sm">
+                    ₹{item.price}
+                  </p>
                 </div>
               </div>
             </div>
@@ -90,13 +123,15 @@ const Collection = () => {
           </h2>
           <div className="w-16 h-px bg-white mx-auto mb-8"></div>
           <p className="text-gray-300 max-w-xl mx-auto text-lg leading-relaxed">
-            Our collections are defined by architecture, fluidity, and monochrome
-            identity — embodying luxury without excess. Each stitch tells a
-            story of meticulous craftsmanship.
+            Our collections are defined by architecture, fluidity, and
+            monochrome identity — embodying luxury without excess. Each stitch
+            tells a story of meticulous craftsmanship.
           </p>
+          <Link to="/Lookbook">
           <button className="mt-12 px-8 py-3 border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 text-sm tracking-widest font-light">
             EXPLORE THE MAKING
           </button>
+          </Link>
         </div>
       </section>
 
@@ -111,12 +146,14 @@ const Collection = () => {
             fabrics and craftsmanship.
           </p>
           <div className="flex justify-center gap-4">
-            <button className="px-8 py-3 bg-black text-white hover:bg-gray-800 transition-all duration-300 text-sm tracking-widest font-light">
+            {/* <button className="px-8 py-3 bg-black text-white hover:bg-gray-800 transition-all duration-300 text-sm tracking-widest font-light">
               BOOK AN APPOINTMENT
-            </button>
+            </button> */}
+            <Link to="/contact">
             <button className="px-8 py-3 border border-black text-black bg-transparent hover:bg-black hover:text-white transition-all duration-300 text-sm tracking-widest font-light">
               CONTACT US
             </button>
+            </Link>
           </div>
         </div>
       </section>

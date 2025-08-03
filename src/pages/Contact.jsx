@@ -252,7 +252,19 @@ const Contact = () => {
                 href="tel:+918980001815"
                 className="text-gray-600 hover:text-black transition duration-200"
               >
-                +91 89800 01815
+                +91 89800 01815 | 
+              </a>
+              <a
+                href="tel:+919726530406"
+                className="text-gray-600 hover:text-black transition duration-200"
+              >
+                | +91 97265 30406 |
+              </a>
+               <a
+                href="tel:+916353492283"
+                className="text-gray-600 hover:text-black transition duration-200"
+              >
+                | +91 63534 92283
               </a>
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">

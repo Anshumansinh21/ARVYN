@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import philosophyImage from "../assets/homeh3.jpg";
 import home2 from "../assets/homeh1.jpg";
 import hero from "../assets/Tshirt/pol5.jpeg";
-import collection1 from "../assets/collection-1.jpg";
-import collection2 from "../assets/collection-2.jpg";
-import collection3 from "../assets/collection-3.jpg";
-import look1 from "../assets/lookbook-1.jpg";
-import look2 from "../assets/lookbook-2.jpg";
-import look3 from "../assets/lookbook-3.jpg";
-import look4 from "../assets/lookbook-4.jpg";
-import look5 from "../assets/lookbook-5.jpg";
+import collection1 from "../assets/Tshirt/IMG_9724.JPG";
+import collection2 from "../assets/Tshirt/IMG_9727.png";
+import collection3 from "../assets/Tshirt/polosk1.jpeg";
+import look1 from "../assets/Tshirt/IMG_9766.JPG";
+import look2 from "../assets/Tshirt/reguni2.jpeg";
+import look3 from "../assets/Tshirt/IMG_9729.JPG";
+import look4 from "../assets/Tshirt/reguni5.jpeg";
+import look5 from "../assets/Tshirt/polob1.jpeg";
 import bgvid from "../assets/bgvid.mp4";
 import { Link } from 'react-router-dom';
 
@@ -317,7 +317,9 @@ export default function Home() {
               }}
               transition={{ duration: 0.3 }}
             >
+              <Link to="/collection">
               <span className="relative z-10">View All Collections</span>
+              </Link>
               <motion.div 
                 className="absolute inset-0 bg-black origin-left"
                 initial={{ scaleX: 0 }}
@@ -393,7 +395,7 @@ export default function Home() {
                       whileHover={{ y: 0, opacity: 1 }}
                       transition={{ delay: 0.2 }}
                     >
-                      Spring/Summer 2024
+                      {/* Spring/Summer 2024 */}
                     </motion.p>
                   </div>
                 </div>

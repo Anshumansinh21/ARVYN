@@ -13,6 +13,8 @@ import img7 from "../assets/Tshirt/polo2.jpg";
 import img8 from "../assets/Tshirt/polo3.jpg";
 import img9 from "../assets/Tshirt/over 5c.png";
 import img10 from "../assets/Tshirt/over1.jpeg";
+import img11 from "../assets/Tshirt/IMG_9729.JPG";
+
 
 // ✅ Create array using imported values
 const images = [
@@ -26,6 +28,7 @@ const images = [
   img8,
   img9,
   img10,
+  img11,
 ];
 
 const Lookbook = () => {
