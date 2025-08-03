@@ -3,7 +3,7 @@ import philosophyImage from "../assets/homeh3.jpg";
 import home2 from "../assets/homeh1.jpg";
 import hero from "../assets/Tshirt/pol5.jpeg";
 import collection1 from "../assets/Tshirt/IMG_9724.JPG";
-import collection2 from "../assets/Tshirt/IMG_9727.png";
+import collection2 from "../assets/Tshirt/IMG_9727.PNG";
 import collection3 from "../assets/Tshirt/polosk1.jpeg";
 import look1 from "../assets/Tshirt/IMG_9766.JPG";
 import look2 from "../assets/Tshirt/reguni2.jpeg";
